@@ -20,7 +20,7 @@ const jetBrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const siteUrl = "https://miljan-milojkovic.dev";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://miljanmilojkovic.com";
 
 export const metadata: Metadata = {
   title: "Miljan Milojkovic — Full-Stack Developer",
