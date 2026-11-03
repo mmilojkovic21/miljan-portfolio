@@ -195,41 +195,43 @@ export default function Portfolio() {
 
           {/* Projects */}
           <Card accent className="flex min-h-[300px] flex-col gap-4 p-9">
-            <Label className="text-bg">Project · SaaS API</Label>
-            <h3 className="text-[34px] font-bold tracking-[-0.03em]">E-Rechnung 2Go</h3>
+            <Label className="text-bg">Own product</Label>
+            <h3 className="text-[28px] font-bold leading-[1.1] tracking-[-0.03em]">Warehouse &amp; inventory app</h3>
             <p className="leading-[1.55]">
-              Multi-tenant invoicing APIs — tenants, customers, VAT, subscriptions, CSV export
-              and real-time document updates.
+              My own warehouse and inventory management product — designed and built end-to-end,
+              from data model to working app.
             </p>
-            <span className="mt-auto font-mono text-xs">.NET 8 · EF Core · SignalR · Stripe · Vue</span>
           </Card>
 
           <Card className="flex min-h-[300px] flex-col gap-4 p-9" delay={0.05}>
-            <Label>Project · Internal tool</Label>
-            <h3 className="text-[34px] font-bold tracking-[-0.03em]">Ticketbase</h3>
+            <Label>Project · SaaS API</Label>
+            <h3 className="text-[28px] font-bold leading-[1.1] tracking-[-0.03em]">Multi-tenant invoicing platform</h3>
             <p className="leading-[1.55] text-body">
-              Helpdesk for creating, tracking and resolving support tickets across the ITM team.
+              Multi-tenant invoicing APIs — tenants, customers, VAT, subscriptions, CSV export
+              and real-time document updates.
             </p>
-            <div className="mt-auto flex justify-between gap-3 font-mono text-xs text-muted">
-              <span>Laravel · Livewire</span>
-              <a
-                href="https://itm.ticketbase.net/login"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent hover:underline"
-              >
-                open ↗
-              </a>
-            </div>
+            <span className="mt-auto font-mono text-xs text-muted">.NET 8 · EF Core · SignalR · Stripe · Vue</span>
           </Card>
 
-          <Card className="flex min-h-[300px] flex-col gap-3 p-9" delay={0.1}>
-            <Label>Education</Label>
-            <h3 className="mt-2 text-2xl font-semibold leading-[1.2] tracking-[-0.02em]">
-              Faculty of Sciences and Mathematics, University of Niš
-            </h3>
-            <p className="text-muted">Computer Science — one exam remaining</p>
-            <p className="mt-auto text-sm text-muted">Gymnasium Leskovac</p>
+          <Card className="flex min-h-[300px] flex-col gap-4 p-9" delay={0.1}>
+            <Label>Project · Internal tool</Label>
+            <h3 className="text-[28px] font-bold leading-[1.1] tracking-[-0.03em]">Support ticketing system</h3>
+            <p className="leading-[1.55] text-body">
+              Helpdesk for creating, tracking and resolving support tickets — boards, workflows
+              and ticket lifecycle.
+            </p>
+            <span className="mt-auto font-mono text-xs text-muted">Laravel · Livewire</span>
+          </Card>
+
+          <Card className="col-span-full flex flex-wrap items-end justify-between gap-6 px-6 py-8 sm:px-12">
+            <div className="min-w-0 flex-[999_1_480px]">
+              <Label>Education</Label>
+              <h3 className="mt-3 text-2xl font-semibold leading-[1.2] tracking-[-0.02em]">
+                Faculty of Sciences and Mathematics, University of Niš
+              </h3>
+              <p className="mt-1 text-muted">Computer Science — one exam remaining</p>
+            </div>
+            <p className="text-sm text-muted">Gymnasium Leskovac</p>
           </Card>
 
           {/* Stack */}
