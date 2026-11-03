@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #07070b;
-  --bg-elevated: #0f0f16;
-  --ink: #f3f2ec;
-  --muted: #9a9fae;
-  --line: rgba(255, 255, 255, 0.09);
-  --accent-violet: #0891b2;
-  --accent-blue: #22d3ee;
-  --accent-lime: #5eead4;
-  --background: var(--bg);
-  --foreground: var(--ink);
+  --bg: #0c0e0d;
+  --surface: #141716;
+  --line: #232826;
+  --line-strong: #2e3431;
+  --ink: #e9ece8;
+  --body: #c9d0cb;
+  --muted: #9aa39d;
+  --accent: #c6f432;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-instrument-sans);
-  --font-mono: var(--font-jetbrains-mono);
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist);
+  --font-mono: var(--font-geist-mono);
 }
 
 html {
@@ -25,13 +29,13 @@ html {
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--ink);
 }
 
 ::selection {
-  background: var(--accent-lime);
-  color: #07070b;
+  background: var(--accent);
+  color: var(--bg);
 }
 
 ::-webkit-scrollbar {
@@ -41,42 +45,7 @@ body {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-elevated);
+  background: var(--line-strong);
   border: 2px solid var(--bg);
   border-radius: 999px;
-}
-
-@keyframes float1 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(70px, -50px) scale(1.15); }
-}
-@keyframes float2 {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-60px, 60px) scale(1.1); }
-}
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.animate-float1 {
-  animation: float1 17s ease-in-out infinite;
-}
-.animate-float2 {
-  animation: float2 21s ease-in-out infinite;
-}
-.marquee-track {
-  animation: marquee 26s linear infinite;
-}
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-.animate-gradient-shift {
-  background-size: 200% 200%;
-  animation: gradientShift 8s ease infinite;
 }

@@ -1,45 +1,37 @@
 import type { Metadata } from "next";
-import { Archivo, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
-  subsets: ["latin"],
-  weight: ["500", "700", "900"],
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin", "latin-ext"],
 });
 
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-});
-
-const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin", "latin-ext"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://miljanmilojkovic.com";
 
 export const metadata: Metadata = {
-  title: "Miljan Milojkovic — Full-Stack Developer",
+  title: "Miljan Milojković — Full-Stack Software Engineer",
   description:
-    "Full-stack developer (.NET, C#, Laravel, React, Vue, Next.js) with ~5 years of experience building APIs and business systems.",
+    "Full-stack software engineer (.NET 8, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
   openGraph: {
-    title: "Miljan Milojkovic — Full-Stack Developer",
+    title: "Miljan Milojković — Full-Stack Software Engineer",
     description:
-      "Full-stack developer (.NET, C#, Laravel, React, Vue, Next.js) with ~5 years of experience building APIs and business systems.",
+      "Full-stack software engineer (.NET 8, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
     url: siteUrl,
-    siteName: "Miljan Milojkovic",
+    siteName: "Miljan Milojković",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Miljan Milojkovic — Full-Stack Developer",
+    title: "Miljan Milojković — Full-Stack Software Engineer",
     description:
-      "Full-stack developer (.NET, C#, Laravel, React, Vue, Next.js) with ~5 years of experience building APIs and business systems.",
+      "Full-stack software engineer (.NET 8, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
   },
 };
 
@@ -47,7 +39,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${instrumentSans.variable} ${jetBrainsMono.variable} h-full antialiased`}
+      className={`${geist.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
