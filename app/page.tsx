@@ -9,25 +9,28 @@ const LINKEDIN_URL = "https://linkedin.com/in/miljan-milojkovic-682878200";
 
 // ─── Data (iz CV-a) ──────────────────────────────────────────
 const HIGHLIGHTS = [
-  "Warehouse management module on event-driven architecture",
-  "EDI, ZUGFeRD & XRechnung parsing for automated invoicing",
-  "GoBD-compliant e-invoicing systems for a German client",
-  "Jira-like ticketing: boards, workflows, ticket lifecycle",
-  "Schema design, migrations & query tuning on SQL Server / Postgres / MySQL",
-  "Stripe, SMTP, JWT / OAuth2 and SignalR real-time",
+  "Enterprise-tier warehouse management module on event-driven architecture, separating goods-receipt and delivery-note workflows",
+  "API of a multi-tenant invoicing SaaS used by ~100 companies",
+  "Structured document parsing that feeds automated invoicing pipelines",
+  "GoBD-compliant systems and e-invoicing standards: ZUGFeRD / XRechnung, EDI",
+  "Internal Jira-style ticketing: boards, workflows, ticket lifecycle, team collaboration",
+  "Schema design, migrations & query optimization on SQL Server / PostgreSQL / MySQL",
+  "Stripe, SMTP / email providers, JWT / OAuth2 and SignalR real-time",
+  "Unit and integration tests, CI/CD with GitHub Actions and Docker",
 ];
 
 const LANGUAGES = [
   { name: "Serbian", level: "native", pct: 100 },
   { name: "English", level: "fluent", pct: 90 },
-  { name: "German", level: "beginner", pct: 25 },
 ];
 
 const STACK = [
-  { group: "backend", items: ["C#", ".NET 8", "ASP.NET Core", "EF Core", "Minimal APIs", "SignalR", "Laravel"] },
-  { group: "frontend", items: ["Vue.js", "React", "Next.js", "TypeScript"] },
-  { group: "data", items: ["SQL Server", "PostgreSQL", "MySQL", "Event-driven", "Multi-tenant"] },
-  { group: "integrations", items: ["Stripe", "JWT / OAuth2", "ZUGFeRD", "XRechnung", "Docker"] },
+  { group: "backend", items: ["C#", ".NET", "ASP.NET Core", "EF Core", "Minimal APIs", "REST", "SignalR", "Laravel / PHP"] },
+  { group: "frontend", items: ["Vue.js", "React", "Next.js", "JavaScript / TypeScript"] },
+  { group: "data & architecture", items: ["SQL Server", "PostgreSQL", "MySQL", "Clean Architecture", "Event-driven", "Multi-tenant"] },
+  { group: "integrations & auth", items: ["Stripe", "SMTP / email", "JWT / OAuth2", "Document parsing"] },
+  { group: "testing", items: ["xUnit", "NSubstitute", "Shouldly", "Testcontainers", "WebApplicationFactory", "Vitest", "React Testing Library"] },
+  { group: "tooling & devops", items: ["GitHub Actions", "Docker", "Docker Compose", "Nginx", "EF Core Migrations", "OpenAPI", "Orval", "Vite", "oxlint", "Git", "Postman"] },
 ];
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -111,7 +114,7 @@ export default function Portfolio() {
                 Milojković
               </h1>
               <p className="mt-7 max-w-[640px] text-lg leading-[1.45] text-body sm:text-[22px]">
-                Full-stack software engineer. Deep backend on .NET 8 / C# / ASP.NET Core,
+                Full-stack software engineer. Deep backend on .NET / C# / ASP.NET Core,
                 practical frontend in Vue, React and Next.js.
               </p>
             </div>
@@ -148,7 +151,7 @@ export default function Portfolio() {
             <Label>Based in</Label>
             <div>
               <div className="text-4xl font-semibold tracking-[-0.03em]">Niš, Serbia</div>
-              <div className="mt-2 text-muted">Working with German-market clients</div>
+              <div className="mt-2 text-muted">CET · Working with German-market clients</div>
             </div>
           </Card>
 
@@ -207,18 +210,18 @@ export default function Portfolio() {
             <Label>Project · SaaS API</Label>
             <h3 className="text-[28px] font-bold leading-[1.1] tracking-[-0.03em]">Multi-tenant invoicing platform</h3>
             <p className="leading-[1.55] text-body">
-              Multi-tenant invoicing APIs — tenants, customers, VAT, subscriptions, CSV export
-              and real-time document updates.
+              API used by ~100 companies, processing several thousand invoices per month —
+              tenants, customers, VAT, subscriptions, CSV export and real-time document updates.
             </p>
-            <span className="mt-auto font-mono text-xs text-muted">.NET 8 · EF Core · SignalR · Stripe · Vue</span>
+            <span className="mt-auto font-mono text-xs text-muted">.NET · EF Core · SignalR · Stripe · Vue</span>
           </Card>
 
           <Card className="flex min-h-[300px] flex-col gap-4 p-9" delay={0.1}>
             <Label>Project · Internal tool</Label>
-            <h3 className="text-[28px] font-bold leading-[1.1] tracking-[-0.03em]">Support ticketing system</h3>
+            <h3 className="text-[28px] font-bold leading-[1.1] tracking-[-0.03em]">Jira-style ticketing platform</h3>
             <p className="leading-[1.55] text-body">
-              Helpdesk for creating, tracking and resolving support tickets — boards, workflows
-              and ticket lifecycle.
+              Internal platform for tracking work across teams — boards, workflows, ticket
+              lifecycle and team collaboration features.
             </p>
             <span className="mt-auto font-mono text-xs text-muted">Laravel · Livewire</span>
           </Card>
@@ -229,15 +232,14 @@ export default function Portfolio() {
               <h3 className="mt-3 text-2xl font-semibold leading-[1.2] tracking-[-0.02em]">
                 Faculty of Sciences and Mathematics, University of Niš
               </h3>
-              <p className="mt-1 text-muted">Computer Science — one exam remaining</p>
+              <p className="mt-1 text-muted">B.Sc. Computer Science — final exam remaining, graduating soon</p>
             </div>
-            <p className="text-sm text-muted">Gymnasium Leskovac</p>
           </Card>
 
           {/* Stack */}
           <Card id="stack" className="col-span-full px-6 py-10 sm:px-12">
             <Label>Stack</Label>
-            <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {STACK.map((s) => (
                 <div key={s.group}>
                   <div className="mb-3 font-mono text-[13px] text-accent">{s.group}</div>

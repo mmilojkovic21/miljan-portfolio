@@ -17,11 +17,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://miljanmilojkovic.co
 export const metadata: Metadata = {
   title: "Miljan Milojković — Full-Stack Software Engineer",
   description:
-    "Full-stack software engineer (.NET 8, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
+    "Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
   openGraph: {
     title: "Miljan Milojković — Full-Stack Software Engineer",
     description:
-      "Full-stack software engineer (.NET 8, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
+      "Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
     url: siteUrl,
     siteName: "Miljan Milojković",
     locale: "en_US",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Miljan Milojković — Full-Stack Software Engineer",
     description:
-      "Full-stack software engineer (.NET 8, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
+      "Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.",
   },
 };
 
