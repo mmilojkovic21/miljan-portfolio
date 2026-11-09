@@ -41,6 +41,7 @@ const revealer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
     entry.target.classList.add("in");
+    if (!calm) entry.target.querySelectorAll(".label, .group").forEach((el) => scramble(el, 600));
     revealer.unobserve(entry.target);
   });
 }, { rootMargin: "0px 0px -60px" });
@@ -51,10 +52,17 @@ if (!calm) {
   typePrompt();
   countYears();
   startDots();
+  heroParallax();
 }
 if (finePointer) {
   trackSpotlight();
-  if (!calm) enableTilt();
+  if (!calm) {
+    enableTilt();
+    enableMagnet();
+    $$(".site-header nav a, .site-footer a").forEach((link) => {
+      link.addEventListener("pointerenter", () => scramble(link, 400));
+    });
+  }
 }
 
 function splitName() {
@@ -200,4 +208,55 @@ function startDots() {
   document.addEventListener("visibilitychange", run);
   resize();
   run();
+}
+
+// Text "decodes" through random characters back to its real value.
+// Only used on monospace text, so the width never changes.
+function scramble(el, duration) {
+  const glyphs = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#$%&*/<>";
+  const text = el.dataset.text ?? (el.dataset.text = el.textContent);
+  const run = (el.scrambleRun = (el.scrambleRun || 0) + 1);
+  const start = performance.now();
+  requestAnimationFrame(function step(now) {
+    if (el.scrambleRun !== run) return;
+    const t = Math.min((now - start) / duration, 1);
+    el.textContent = [...text].map((char, i, all) => {
+      if (!/[A-Za-z0-9]/.test(char) || i / all.length < t * 1.2 - 0.2) return char;
+      const glyph = glyphs[Math.floor(Math.random() * glyphs.length)];
+      return char === char.toLowerCase() ? glyph.toLowerCase() : glyph;
+    }).join("");
+    if (t < 1) requestAnimationFrame(step);
+    else el.textContent = text;
+  });
+}
+
+function enableMagnet() {
+  $$(".btn").forEach((button) => {
+    button.addEventListener("pointermove", (event) => {
+      const box = button.getBoundingClientRect();
+      const x = event.clientX - box.left - box.width / 2;
+      const y = event.clientY - box.top - box.height / 2;
+      button.style.translate = `${x * 0.12}px ${y * 0.3}px`;
+    });
+    button.addEventListener("pointerleave", () => { button.style.translate = ""; });
+  });
+}
+
+// Hero text drifts slower than the page and fades as it scrolls away.
+function heroParallax() {
+  const text = $(".hero-text");
+  const hero = text.closest(".hero");
+  let queued = false;
+  function update() {
+    queued = false;
+    const progress = Math.min(Math.max(scrollY / hero.offsetHeight, 0), 1);
+    text.style.translate = `0 ${progress * 70}px`;
+    text.style.opacity = String(1 - progress * 0.75);
+  }
+  addEventListener("scroll", () => {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(update);
+  }, { passive: true });
+  update();
 }
