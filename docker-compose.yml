@@ -1,12 +1,7 @@
 services:
   portfolio:
-    build:
-      context: .
-      args:
-        NEXT_PUBLIC_SITE_URL: https://${DOMAIN:-miljanmilojkovic.com}
+    build: .
     container_name: miljan-portfolio
     ports:
       - "3000:3001"
-    environment:
-      - PORT=3001
     restart: unless-stopped

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Miljan Milojković — Full-Stack Software Engineer</title>
+  <meta name="description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.">
+  <link rel="canonical" href="https://miljanmilojkovic.com/">
+  <meta property="og:title" content="Miljan Milojković — Full-Stack Software Engineer">
+  <meta property="og:description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.">
+  <meta property="og:url" content="https://miljanmilojkovic.com/">
+  <meta property="og:site_name" content="Miljan Milojković">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Miljan Milojković — Full-Stack Software Engineer">
+  <meta name="twitter:description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="/main.js" defer></script>
+</head>
+<body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <div class="page">
+    <header class="site-header">
+      <a href="#top" class="brand"><span class="dot"></span>miljanmilojkovic.com</a>
+      <nav>
+        <a href="#work">/work</a>
+        <a href="#stack">/stack</a>
+        <a href="#contact">/contact</a>
+      </nav>
+    </header>
+
+    <main id="top" class="grid">
+      <section class="card hero full reveal">
+        <canvas id="dots" aria-hidden="true"></canvas>
+        <div class="hero-text">
+          <p class="prompt"><span id="prompt">$ whoami</span><span class="caret" aria-hidden="true"></span></p>
+          <h1 id="name"><span class="line">Miljan</span><span class="line">Milojković</span></h1>
+          <p class="lead">Full-stack software engineer. Deep backend on .NET / C# / ASP.NET Core, practical frontend in Vue, React and Next.js.</p>
+        </div>
+        <div class="cta">
+          <a class="btn btn-primary" href="mailto:miljan.milojkovic22@gmail.com">Email me</a>
+          <a class="btn btn-ghost" href="https://linkedin.com/in/miljan-milojkovic-682878200" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        </div>
+      </section>
+
+      <section class="card stat reveal" style="--delay:.05s">
+        <span class="label">Experience</span>
+        <div>
+          <div class="big-number"><span id="years">5</span><span class="accent">+</span></div>
+          <div class="muted">years in production</div>
+        </div>
+      </section>
+
+      <section class="card stat reveal" style="--delay:.1s">
+        <span class="label">Based in</span>
+        <div>
+          <div class="place">Niš, Serbia</div>
+          <div class="muted">CET · Working with German-market clients</div>
+        </div>
+      </section>
+
+      <section class="card langs reveal" style="--delay:.15s">
+        <span class="label">Languages</span>
+        <div class="lang-list">
+          <div>
+            <div class="lang-row"><span>Serbian</span><span class="muted">native</span></div>
+            <div class="bar"><i style="--pct:100%;--i:0"></i></div>
+          </div>
+          <div>
+            <div class="lang-row"><span>English</span><span class="muted">fluent</span></div>
+            <div class="bar"><i style="--pct:90%;--i:1"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="card work full reveal">
+        <div class="work-title">
+          <span class="label">ITM GmbH · Sep 2021 — now</span>
+          <h2>Software Engineer / Web Developer</h2>
+        </div>
+        <ul class="highlights" data-stagger>
+          <li>Enterprise-tier warehouse management module on event-driven architecture, separating goods-receipt and delivery-note workflows</li>
+          <li>API of a multi-tenant invoicing SaaS used by ~100 companies</li>
+          <li>Structured document parsing that feeds automated invoicing pipelines</li>
+          <li>GoBD-compliant systems and e-invoicing standards: ZUGFeRD / XRechnung, EDI</li>
+          <li>Internal Jira-style ticketing: boards, workflows, ticket lifecycle, team collaboration</li>
+          <li>Schema design, migrations &amp; query optimization on SQL Server / PostgreSQL / MySQL</li>
+          <li>Stripe, SMTP / email providers, JWT / OAuth2 and SignalR real-time</li>
+          <li>Unit and integration tests, CI/CD with GitHub Actions and Docker</li>
+        </ul>
+      </section>
+
+      <section class="card card-accent project reveal" data-tilt>
+        <span class="label">Own product</span>
+        <h3>Warehouse &amp; inventory app</h3>
+        <p>My own warehouse and inventory management product — designed and built end-to-end, from data model to working app.</p>
+      </section>
+
+      <section class="card project reveal" data-tilt style="--delay:.05s">
+        <span class="label">Project · SaaS API</span>
+        <h3>Multi-tenant invoicing platform</h3>
+        <p>API used by ~100 companies, processing several thousand invoices per month — tenants, customers, VAT, subscriptions, CSV export and real-time document updates.</p>
+        <span class="tags">.NET · EF Core · SignalR · Stripe · Vue</span>
+      </section>
+
+      <section class="card project reveal" data-tilt style="--delay:.1s">
+        <span class="label">Project · Internal tool</span>
+        <h3>Jira-style ticketing platform</h3>
+        <p>Internal platform for tracking work across teams — boards, workflows, ticket lifecycle and team collaboration features.</p>
+        <span class="tags">Laravel · Livewire</span>
+      </section>
+
+      <section class="card education full reveal">
+        <span class="label">Education</span>
+        <h3>Faculty of Sciences and Mathematics, University of Niš</h3>
+        <p class="muted">B.Sc. Computer Science — final exam remaining, graduating soon</p>
+      </section>
+
+      <section id="stack" class="card stack full reveal">
+        <span class="label">Stack</span>
+        <div class="stack-grid">
+          <div>
+            <div class="group">backend</div>
+            <div class="chips" data-stagger><span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>EF Core</span><span>Minimal APIs</span><span>REST</span><span>SignalR</span><span>Laravel / PHP</span></div>
+          </div>
+          <div>
+            <div class="group">frontend</div>
+            <div class="chips" data-stagger><span>Vue.js</span><span>React</span><span>Next.js</span><span>JavaScript / TypeScript</span></div>
+          </div>
+          <div>
+            <div class="group">data &amp; architecture</div>
+            <div class="chips" data-stagger><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span><span>Clean Architecture</span><span>Event-driven</span><span>Multi-tenant</span></div>
+          </div>
+          <div>
+            <div class="group">integrations &amp; auth</div>
+            <div class="chips" data-stagger><span>Stripe</span><span>SMTP / email</span><span>JWT / OAuth2</span><span>Document parsing</span></div>
+          </div>
+          <div>
+            <div class="group">testing</div>
+            <div class="chips" data-stagger><span>xUnit</span><span>NSubstitute</span><span>Shouldly</span><span>Testcontainers</span><span>WebApplicationFactory</span><span>Vitest</span><span>React Testing Library</span></div>
+          </div>
+          <div>
+            <div class="group">tooling &amp; devops</div>
+            <div class="chips" data-stagger><span>GitHub Actions</span><span>Docker</span><span>Docker Compose</span><span>Nginx</span><span>EF Core Migrations</span><span>OpenAPI</span><span>Orval</span><span>Vite</span><span>oxlint</span><span>Git</span><span>Postman</span></div>
+          </div>
+        </div>
+      </section>
+
+      <footer id="contact" class="site-footer full">
+        <span>© <span id="year">2026</span> Miljan Milojković</span>
+        <a href="mailto:miljan.milojkovic22@gmail.com">miljan.milojkovic22@gmail.com</a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
