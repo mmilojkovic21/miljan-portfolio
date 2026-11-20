@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Miljan Milojković — Full-Stack Software Engineer</title>
-  <meta name="description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.">
+  <meta name="description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, React, Vue, Next.js) with 5 years of experience building business-critical web apps and APIs for the German market.">
   <link rel="canonical" href="https://miljanmilojkovic.com/">
   <meta property="og:title" content="Miljan Milojković — Full-Stack Software Engineer">
-  <meta property="og:description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.">
+  <meta property="og:description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, React, Vue, Next.js) with 5 years of experience building business-critical web apps and APIs for the German market.">
   <meta property="og:url" content="https://miljanmilojkovic.com/">
   <meta property="og:site_name" content="Miljan Milojković">
   <meta property="og:locale" content="en_US">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Miljan Milojković — Full-Stack Software Engineer">
-  <meta name="twitter:description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, Vue, React, Next.js) with 5 years of experience building business-critical web apps and APIs.">
+  <meta name="twitter:description" content="Full-stack software engineer (.NET, C#, ASP.NET Core, React, Vue, Next.js) with 5 years of experience building business-critical web apps and APIs for the German market.">
   <link rel="icon" href="/favicon.ico">
   <link rel="preload" href="/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -41,11 +41,13 @@
         <div class="hero-text">
           <p class="prompt"><span id="prompt">$ whoami</span><span class="caret" aria-hidden="true"></span></p>
           <h1 id="name"><span class="line">Miljan</span><span class="line">Milojković</span></h1>
-          <p class="lead">Full-stack software engineer. Deep backend on .NET / C# / ASP.NET Core, practical frontend in Vue, React and Next.js.</p>
+          <p class="lead">Full-stack software engineer. Deep backend on .NET / C# / ASP.NET Core, practical frontend in React, Vue and Next.js.</p>
+          <p class="status"><span class="dot" aria-hidden="true"></span>Open to remote full-time and contract work</p>
         </div>
         <div class="cta">
           <a class="btn btn-primary" href="mailto:miljan.milojkovic22@gmail.com">Email me</a>
           <a class="btn btn-ghost" href="https://linkedin.com/in/miljan-milojkovic-682878200" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/mmilojkovic21" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
         </div>
       </section>
 
@@ -82,34 +84,42 @@
       <section id="work" class="card work full reveal">
         <div class="work-title">
           <span class="label">ITM GmbH · Sep 2021 — now</span>
-          <h2>Software Engineer / Web Developer</h2>
+          <h2>Software Engineer</h2>
         </div>
         <ul class="highlights" data-stagger>
+          <li>API of a multi-tenant invoicing SaaS used by ~100 companies, processing several thousand invoices per month</li>
           <li>Enterprise-tier warehouse management module on event-driven architecture, separating goods-receipt and delivery-note workflows</li>
-          <li>API of a multi-tenant invoicing SaaS used by ~100 companies</li>
-          <li>Structured document parsing that feeds automated invoicing pipelines</li>
-          <li>GoBD-compliant systems and e-invoicing standards: ZUGFeRD / XRechnung, EDI</li>
-          <li>Internal Jira-style ticketing: boards, workflows, ticket lifecycle, team collaboration</li>
-          <li>Schema design, migrations &amp; query optimization on SQL Server / PostgreSQL / MySQL</li>
-          <li>Stripe, SMTP / email providers, JWT / OAuth2 and SignalR real-time</li>
-          <li>Unit and integration tests, CI/CD with GitHub Actions and Docker</li>
+          <li>Internal Jira-style ticketing platform: boards, workflows, ticket lifecycle and team collaboration</li>
+          <li>Structured document parsing for automated invoicing, compliant with GoBD and ZUGFeRD / XRechnung, EDI</li>
+          <li>Relational databases on SQL Server, PostgreSQL and MySQL; Stripe, email providers and JWT / OAuth2 across .NET and Laravel</li>
+          <li>Unit and integration tests (xUnit, Testcontainers, WebApplicationFactory), CI/CD with GitHub Actions and Docker</li>
         </ul>
       </section>
 
-      <section class="card card-accent project reveal" data-tilt>
-        <span class="label">Own product</span>
-        <h3>Warehouse &amp; inventory app</h3>
-        <p>My own warehouse and inventory management product — designed and built end-to-end, from data model to working app.</p>
+      <section class="card card-accent project lagerko full reveal">
+        <div class="lagerko-main">
+          <span class="label">Own product · 2026 — now</span>
+          <h3>Lagerko — stock management SaaS</h3>
+          <p>Solo-built multi-tenant SaaS for webshops and small businesses: inventory tracking, goods receipts, orders, CSV import, low-stock alerts and reports, with WooCommerce integration via webhooks.</p>
+          <span class="tags">.NET 10 · ASP.NET Core · Clean Architecture · PostgreSQL · SignalR · Hangfire · React · TypeScript</span>
+          <a class="lagerko-link" href="https://lagerko.com" target="_blank" rel="noopener noreferrer">lagerko.com ↗</a>
+        </div>
+        <ul class="lagerko-facts" data-stagger>
+          <li><strong>~550 backend tests</strong> against real PostgreSQL with Testcontainers</li>
+          <li><strong>Tenant isolation</strong> via EF Core global query filters</li>
+          <li><strong>React + TypeScript</strong> frontend with a client generated from OpenAPI</li>
+          <li><strong>GitHub Actions CI/CD</strong> to a self-hosted Docker + Nginx server</li>
+        </ul>
       </section>
 
-      <section class="card project reveal" data-tilt style="--delay:.05s">
+      <section class="card project half reveal" data-tilt>
         <span class="label">Project · SaaS API</span>
         <h3>Multi-tenant invoicing platform</h3>
         <p>API used by ~100 companies, processing several thousand invoices per month — tenants, customers, VAT, subscriptions, CSV export and real-time document updates.</p>
         <span class="tags">.NET · EF Core · SignalR · Stripe · Vue</span>
       </section>
 
-      <section class="card project reveal" data-tilt style="--delay:.1s">
+      <section class="card project half reveal" data-tilt style="--delay:.05s">
         <span class="label">Project · Internal tool</span>
         <h3>Jira-style ticketing platform</h3>
         <p>Internal platform for tracking work across teams — boards, workflows, ticket lifecycle and team collaboration features.</p>
@@ -119,7 +129,7 @@
       <section class="card education full reveal">
         <span class="label">Education</span>
         <h3>Faculty of Sciences and Mathematics, University of Niš</h3>
-        <p class="muted">B.Sc. Computer Science — final exam remaining, graduating soon</p>
+        <p class="muted">Computer Science</p>
       </section>
 
       <section id="stack" class="card stack full reveal">
@@ -127,11 +137,11 @@
         <div class="stack-grid">
           <div>
             <div class="group">backend</div>
-            <div class="chips" data-stagger><span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>EF Core</span><span>Minimal APIs</span><span>REST</span><span>SignalR</span><span>Laravel / PHP</span></div>
+            <div class="chips" data-stagger><span>C#</span><span>.NET</span><span>ASP.NET Core</span><span>EF Core</span><span>REST</span><span>SignalR</span><span>Laravel / PHP</span></div>
           </div>
           <div>
             <div class="group">frontend</div>
-            <div class="chips" data-stagger><span>Vue.js</span><span>React</span><span>Next.js</span><span>JavaScript / TypeScript</span></div>
+            <div class="chips" data-stagger><span>React</span><span>Vue.js</span><span>Next.js</span><span>JavaScript / TypeScript</span><span>TanStack Query</span></div>
           </div>
           <div>
             <div class="group">data &amp; architecture</div>
@@ -139,15 +149,15 @@
           </div>
           <div>
             <div class="group">integrations &amp; auth</div>
-            <div class="chips" data-stagger><span>Stripe</span><span>SMTP / email</span><span>JWT / OAuth2</span><span>Document parsing</span></div>
+            <div class="chips" data-stagger><span>Stripe</span><span>WooCommerce</span><span>SMTP / email</span><span>JWT / OAuth2</span><span>ASP.NET Core Identity</span></div>
           </div>
           <div>
             <div class="group">testing</div>
-            <div class="chips" data-stagger><span>xUnit</span><span>NSubstitute</span><span>Shouldly</span><span>Testcontainers</span><span>WebApplicationFactory</span><span>Vitest</span><span>React Testing Library</span></div>
+            <div class="chips" data-stagger><span>xUnit</span><span>NSubstitute</span><span>Testcontainers</span><span>WebApplicationFactory</span><span>Vitest</span><span>React Testing Library</span></div>
           </div>
           <div>
             <div class="group">tooling &amp; devops</div>
-            <div class="chips" data-stagger><span>GitHub Actions</span><span>Docker</span><span>Docker Compose</span><span>Nginx</span><span>EF Core Migrations</span><span>OpenAPI</span><span>Orval</span><span>Vite</span><span>oxlint</span><span>Git</span><span>Postman</span></div>
+            <div class="chips" data-stagger><span>GitHub Actions</span><span>Docker</span><span>Nginx</span><span>Linux</span><span>EF Core Migrations</span><span>OpenAPI</span><span>Git</span></div>
           </div>
         </div>
       </section>
